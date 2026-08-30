@@ -1,0 +1,27 @@
+[bootstrap.repos]
+"~/.config/nvim" = { url = "git@github.com:vincent-thomas/nvim.git" }
+
+[tools]
+"aqua:rust-lang/rustup" = "latest"
+bun = "latest"
+codex = "latest"
+fd = "latest"
+ripgrep = "latest"
+fzf = "latest"
+go = "latest"
+neovim = "latest"
+pitchfork = "latest"
+tmux = "latest"
+
+[settings]
+lockfile = true
+
+[dotfiles]
+"~/.config/alacritty" = {}
+"~/.config/mise/conf.d/nvim.toml" = {
+  source = "~/.config/nvim/mise.toml", mode = "symlink",
+}
+"~/.config/nvim" = {}
+"~/.gitconfig" = {}
+"~/.tmux.conf" = {}
+"~/.zshrc" = {}
