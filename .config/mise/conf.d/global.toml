@@ -1,0 +1,17 @@
+[tools]
+# langs
+bun = "latest"
+rust = "latest"
+
+# harnesses
+codex = "latest"
+
+# cli tools
+fd = "latest"
+ripgrep = "latest"
+fzf = "latest"
+
+# dev
+neovim = "latest"
+pitchfork = "latest"
+tmux = "latest"
