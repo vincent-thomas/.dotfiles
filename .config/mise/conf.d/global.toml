@@ -16,3 +16,6 @@ bat = "latest"
 neovim = "latest"
 pitchfork = "latest"
 tmux = "latest"
+
+[env]
+EDITOR="nvim"
