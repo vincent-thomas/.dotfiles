@@ -8,6 +8,9 @@ zle -N edit-command-line
 bindkey '^x^e' edit-command-line
 # end
 
+
+bindkey -s '^Xgc' 'git commit -m ""\C-b'
+
 # suffix aliases
 alias -s md="bat"
 # end
