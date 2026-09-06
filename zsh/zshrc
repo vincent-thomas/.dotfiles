@@ -2,6 +2,12 @@ PS1='%F{183}%m%F{8} :: %F{14}%~%F{yellow} $ %f'
 
 source <(fzf --zsh)
 
+# Edit command in editor command
+autoload -Uz edit-command-line
+zle -N edit-command-line
+bindkey '^x^e' edit-command-line
+# end
+
 alias v="nvim"
 alias cargo="c"
 
