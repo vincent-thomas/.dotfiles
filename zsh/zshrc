@@ -2,6 +2,11 @@ PS1='%F{183}%m%F{8} :: %F{14}%~%F{yellow} $ %f'
 
 source <(fzf --zsh)
 
+# ssh
+eval "$(ssh-agent)" > /dev/null
+ssh-add ~/.ssh/github 2> /dev/null
+# end
+
 # Edit command in editor command
 autoload -Uz edit-command-line
 zle -N edit-command-line
