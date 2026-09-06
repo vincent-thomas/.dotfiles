@@ -8,6 +8,10 @@ zle -N edit-command-line
 bindkey '^x^e' edit-command-line
 # end
 
+# suffix aliases
+alias -s md="bat"
+# end
+
 alias v="nvim"
 alias cargo="c"
 

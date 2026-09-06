@@ -10,6 +10,7 @@ codex = "latest"
 fd = "latest"
 ripgrep = "latest"
 fzf = "latest"
+bat = "latest"
 
 # dev
 neovim = "latest"
