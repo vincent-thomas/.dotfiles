@@ -44,6 +44,7 @@ fi
 }
 "~/.gitconfig" = "git/gitconfig"
 # "~/.tmux.conf" = {}
-"~/.zshrc/config" = { source = "zsh/zshrc", template = "tera" }
 "~/.zshrc/mise_activate" = { block = "eval \"$(mise activate zsh)\"" }
+"~/.zshrc/config" = { source = "zsh/zshrc", template = "tera" }
+"~/.zprofile/setup_path" = { block = "export PATH=\"$PATH:$HOME/.local/bin/mise\"" }
 "~/.zprofile/mise_activate_shims" = { block = "eval \"$(mise activate zsh --shims)\"" }
