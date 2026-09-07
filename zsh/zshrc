@@ -1,5 +1,7 @@
 PS1='%F{183}%m%F{8} :: %F{14}%~%F{yellow} $ %f'
 
+export PATH="$PATH:~/.local/bin"
+
 source <(fzf --zsh)
 
 # ssh
