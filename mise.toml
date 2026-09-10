@@ -30,9 +30,10 @@ fi
 [bootstrap.packages]
 "brew:zsh" = "latest"
 
-# [settings]
-# lockfile = true
-# dotfiles.default_mode = "symlink"
+[settings]
+lockfile = true
+dotfiles.default_mode = "copy"
+minimum_release_age = "0"
 
 [dotfiles]
 # "~/.config/alacritty" = {}
@@ -48,6 +49,3 @@ fi
 "~/.zshrc/config" = { source = "zsh/zshrc", template = "tera" }
 "~/.zprofile/setup_path" = { block = "export PATH=\"$PATH:$HOME/.local/bin\"" }
 "~/.zprofile/mise_activate_shims" = { block = "eval \"$(mise activate zsh --shims)\"" }
-
-[settings]
-minimum_release_age = "0"
