@@ -28,17 +28,22 @@ fi
 '''
 
 [bootstrap.packages]
+"apt:build-essential" = "latest"
 "brew:zsh" = "latest"
 
 [settings]
 lockfile = true
 dotfiles.default_mode = "copy"
 minimum_release_age = "0"
+experimental = true
+
+[settings.status]
+show_deps_stale = false
 
 [dotfiles]
 # "~/.config/alacritty" = {}
 "~/.config/mise/conf.d/global.toml" = {
-  source = "~/.dotfiles/.config/mise/conf.d/global.toml", mode = "symlink",
+  source = ".config/mise/conf.d/global.toml", mode = "symlink",
 }
 "~/.config/mise/conf.d/nvim.toml" = {
   source = "~/.config/nvim/mise.toml", mode = "symlink",
