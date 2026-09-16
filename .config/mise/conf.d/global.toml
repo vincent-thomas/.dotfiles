@@ -1,3 +1,8 @@
+[settings]
+lockfile = true
+dotfiles.default_mode = "copy"
+minimum_release_age = "0"
+
 [tools]
 # langs
 bun = "latest"
