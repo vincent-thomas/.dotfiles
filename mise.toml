@@ -1,0 +1,59 @@
+[bootstrap.repos]
+"~/.config/nvim" = { url = "git@github.com:vincent-thomas/nvim.git" }
+
+[bootstrap.remote]
+source = "."
+
+[bootstrap.remote.hosts.dev]
+host = "dev"
+user = "ubuntu"
+port = 22
+identity_file = "~/.ssh/work"
+bootstrap_command = '''
+if [ ! -x "$HOME/.local/bin/mise" ]; then
+  curl -fsSL https://mise.run | sh
+fi
+'''
+
+[bootstrap.remote.hosts.orb]
+host = "orb"
+identity_file = "~/.ssh/work"
+user = "vt"
+port = 22
+bootstrap_command = '''
+if [ ! -x "$HOME/.local/bin/mise" ]; then
+  curl -fsSL https://mise.run | sh
+fi
+'''
+
+[bootstrap.packages]
+"apt:build-essential" = "latest"
+"brew:zsh" = "latest"
+
+[settings]
+lockfile = true
+minimum_release_age = "0"
+experimental = true
+
+[settings.status]
+show_deps_stale = false
+
+[dotfiles]
+"~/.config/mise" = { source = "mise", mode = "copy" }
+"~/.config/mise/conf.d/nvim.toml" = { source = "~/.config/nvim/mise.toml", mode = "symlink" }
+"~/.gitconfig" = "git/gitconfig"
+"~/.tmux.conf" = "tmux/conf"
+"~/.config/scripts/tmux-sessioniser.sh" = "tmux/scripts/tmux-sessioniser.sh"
+
+# zshrc
+"~/.zshrc/mise_activate" = { block = "eval \"$(mise activate zsh)\"" }
+"~/.zshrc/config" = { source = "zsh/zshrc", template = "tera" }
+
+# zprofile
+"~/.zprofile/setup_path" = { block = "export PATH=\"$PATH:$HOME/.local/bin\"" }
+"~/.zprofile/mise_activate_shims" = { block = "eval \"$(mise activate zsh --shims)\"" }
+
+[tools]
+codex = "latest"
+delta = "latest"
+pi = "latest"
