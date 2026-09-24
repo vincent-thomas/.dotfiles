@@ -42,8 +42,8 @@ show_deps_stale = false
 
 [dotfiles]
 # "~/.config/alacritty" = {}
-"~/.config/mise/conf.d/global.toml" = {
-  source = ".config/mise/conf.d/global.toml", mode = "symlink",
+"~/.config/mise" = {
+  source = ".config/mise", mode = "symlink",
 }
 "~/.config/mise/conf.d/nvim.toml" = {
   source = "~/.config/nvim/mise.toml", mode = "symlink",
@@ -54,3 +54,7 @@ show_deps_stale = false
 "~/.zshrc/config" = { source = "zsh/zshrc", template = "tera" }
 "~/.zprofile/setup_path" = { block = "export PATH=\"$PATH:$HOME/.local/bin\"" }
 "~/.zprofile/mise_activate_shims" = { block = "eval \"$(mise activate zsh --shims)\"" }
+
+[tools]
+codex = "latest"
+pi = "latest"
