@@ -39,7 +39,7 @@ experimental = true
 show_deps_stale = false
 
 [dotfiles]
-"~/.config/mise" = { source = "mise", mode = "copy" }
+"~/.config/mise/config.toml" = { source = "mise/config.toml", mode = "copy" }
 "~/.config/mise/conf.d/nvim.toml" = { source = "~/.config/nvim/mise.toml", mode = "symlink" }
 "~/.gitconfig" = "git/gitconfig"
 "~/.tmux.conf" = "tmux/conf"
@@ -54,6 +54,4 @@ show_deps_stale = false
 "~/.zprofile/mise_activate_shims" = { block = "eval \"$(mise activate zsh --shims)\"" }
 
 [tools]
-codex = "latest"
 delta = "latest"
-pi = "latest"
