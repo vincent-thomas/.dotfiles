@@ -3,8 +3,35 @@ PS1='%F{183}%m%F{8} :: %F{14}%~%F{yellow} $ %f'
 source <(fzf --zsh)
 
 # ssh
-eval "$(ssh-agent)" > /dev/null
-ssh-add ~/.ssh/github 2> /dev/null
+_ensure_ssh_agent() {
+  local agent_env="$HOME/.ssh/agent.env"
+
+  # Exit codes 0 (keys loaded) and 1 (no keys) both mean the agent is reachable.
+  ssh-add -l >/dev/null 2>&1
+  if (( $? > 1 )); then
+    if [[ -r "$agent_env" ]]; then
+      source "$agent_env" >/dev/null
+    fi
+
+    ssh-add -l >/dev/null 2>&1
+    if (( $? > 1 )); then
+      (umask 077; ssh-agent -s >| "$agent_env")
+      source "$agent_env" >/dev/null
+    fi
+  fi
+
+  if [[ -f "$HOME/.ssh/github" ]]; then
+    if [[ "$OSTYPE" == darwin* ]]; then
+      ssh-add --apple-use-keychain "$HOME/.ssh/github" >/dev/null 2>&1 ||
+        ssh-add "$HOME/.ssh/github" >/dev/null 2>&1
+    else
+      ssh-add "$HOME/.ssh/github" >/dev/null 2>&1
+    fi
+  fi
+}
+
+_ensure_ssh_agent
+unset -f _ensure_ssh_agent
 # end
 
 # Edit command in editor command
@@ -23,7 +50,7 @@ alias -s md="bat"
 alias v="nvim"
 alias cargo="c"
 
-. /Users/vt/.config/op/plugins.sh
+. "$HOME/.config/op/plugins.sh"
 
-fpath+=('/Users/vt/.local/share/zsh/site-functions')
+fpath+=("$HOME/.local/share/zsh/site-functions")
 autoload -Uz compinit && compinit

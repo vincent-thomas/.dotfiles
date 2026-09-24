@@ -52,6 +52,3 @@ show_deps_stale = false
 # zprofile
 "~/.zprofile/setup_path" = { block = "export PATH=\"$PATH:$HOME/.local/bin\"" }
 "~/.zprofile/mise_activate_shims" = { block = "eval \"$(mise activate zsh --shims)\"" }
-
-[tools]
-delta = "latest"
