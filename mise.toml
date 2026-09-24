@@ -42,8 +42,8 @@ show_deps_stale = false
 
 [dotfiles]
 # "~/.config/alacritty" = {}
-"~/.config/mise" = {
-  source = ".config/mise", mode = "symlink",
+"~/.config/mise/conf.d/global.toml" = {
+  source = ".config/mise/conf.d/global.toml", mode = "symlink",
 }
 "~/.config/mise/conf.d/nvim.toml" = {
   source = "~/.config/nvim/mise.toml", mode = "symlink",
