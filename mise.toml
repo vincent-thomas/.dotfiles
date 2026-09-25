@@ -51,7 +51,6 @@ show_deps_stale = false
 "~/.gitconfig" = "git/gitconfig"
 "~/.tmux.conf" = "tmux/conf"
 "~/.config/scripts/tmux-sessioniser.sh" = "tmux/scripts/tmux-sessioniser.sh"
-"~/.config/scripts/tmux-baconator.sh" = "tmux/scripts/tmux-baconator.sh"
 "~/.zshrc/mise_activate" = { block = "eval \"$(mise activate zsh)\"" }
 "~/.zshrc/config" = { source = "zsh/zshrc", template = "tera" }
 "~/.zprofile/setup_path" = { block = "export PATH=\"$PATH:$HOME/.local/bin\"" }
