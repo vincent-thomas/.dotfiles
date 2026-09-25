@@ -22,8 +22,6 @@ set -g history-limit 5000
 
 
 bind f run-shell "tmux neww ~/.config/scripts/tmux-sessioniser.sh"
-# bind b run-shell "~/.config/scripts/tmux-baconator.sh"
-bind F run-shell "tmux neww ~/.config/scripts/tmux-list-sessions"
 
 bind r source-file ~/.tmux.conf
 bind D detach

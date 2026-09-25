@@ -49,7 +49,8 @@ show_deps_stale = false
   source = "~/.config/nvim/mise.toml", mode = "symlink",
 }
 "~/.gitconfig" = "git/gitconfig"
-# "~/.tmux.conf" = {}
+"~/.tmux.conf" = "tmux/conf"
+"~/.config/scripts/tmux-sessioniser.sh" = "tmux/scripts/tmux-sessioniser.sh"
 "~/.zshrc/mise_activate" = { block = "eval \"$(mise activate zsh)\"" }
 "~/.zshrc/config" = { source = "zsh/zshrc", template = "tera" }
 "~/.zprofile/setup_path" = { block = "export PATH=\"$PATH:$HOME/.local/bin\"" }
