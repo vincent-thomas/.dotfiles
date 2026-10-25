@@ -388,66 +388,6 @@ url = "https://github.com/neovim/neovim/releases/download/v0.12.5/nvim-win64.zip
 [tools.neovim."platforms.windows-x64-baseline"]
 url = "https://github.com/neovim/neovim/releases/download/v0.12.5/nvim-win64.zip"
 
-[[tools.ori]]
-version = "0.15.6-4855f79"
-backend = "aqua:OpenRouterLabs/ori-releases"
-specifiers = ["latest"]
-
-[tools.ori."platforms.linux-arm64"]
-checksum = "sha256:52793ea2474cd32bbc9213c31b69212e6b43c900b10e446114da006525cc88bb"
-url = "https://github.com/OpenRouterLabs/ori-releases/releases/download/cli-0.15.6-4855f79/ori-linux-arm64"
-url_api = "https://api.github.com/repos/OpenRouterLabs/ori-releases/releases/assets/606464764"
-
-[tools.ori."platforms.linux-arm64-musl"]
-checksum = "sha256:52793ea2474cd32bbc9213c31b69212e6b43c900b10e446114da006525cc88bb"
-url = "https://github.com/OpenRouterLabs/ori-releases/releases/download/cli-0.15.6-4855f79/ori-linux-arm64"
-url_api = "https://api.github.com/repos/OpenRouterLabs/ori-releases/releases/assets/606464764"
-
-[tools.ori."platforms.linux-x64"]
-checksum = "sha256:d3525283d0431197943445c499edf8d790d13816752efd0e373afe2da75e035c"
-url = "https://github.com/OpenRouterLabs/ori-releases/releases/download/cli-0.15.6-4855f79/ori-linux-x64"
-url_api = "https://api.github.com/repos/OpenRouterLabs/ori-releases/releases/assets/606464949"
-
-[tools.ori."platforms.linux-x64-baseline"]
-checksum = "sha256:d3525283d0431197943445c499edf8d790d13816752efd0e373afe2da75e035c"
-url = "https://github.com/OpenRouterLabs/ori-releases/releases/download/cli-0.15.6-4855f79/ori-linux-x64"
-url_api = "https://api.github.com/repos/OpenRouterLabs/ori-releases/releases/assets/606464949"
-
-[tools.ori."platforms.linux-x64-musl"]
-checksum = "sha256:d3525283d0431197943445c499edf8d790d13816752efd0e373afe2da75e035c"
-url = "https://github.com/OpenRouterLabs/ori-releases/releases/download/cli-0.15.6-4855f79/ori-linux-x64"
-url_api = "https://api.github.com/repos/OpenRouterLabs/ori-releases/releases/assets/606464949"
-
-[tools.ori."platforms.linux-x64-musl-baseline"]
-checksum = "sha256:d3525283d0431197943445c499edf8d790d13816752efd0e373afe2da75e035c"
-url = "https://github.com/OpenRouterLabs/ori-releases/releases/download/cli-0.15.6-4855f79/ori-linux-x64"
-url_api = "https://api.github.com/repos/OpenRouterLabs/ori-releases/releases/assets/606464949"
-
-[tools.ori."platforms.macos-arm64"]
-checksum = "sha256:7f0a500a12803502475b2ad48a3ecf59a99bb1fc01af782a2dad4b9f18b90a1b"
-url = "https://github.com/OpenRouterLabs/ori-releases/releases/download/cli-0.15.6-4855f79/ori-darwin-arm64"
-url_api = "https://api.github.com/repos/OpenRouterLabs/ori-releases/releases/assets/606464641"
-
-[tools.ori."platforms.macos-x64"]
-checksum = "sha256:aff491540455470ce2cac016efaef60e8d69bec322f082aa23a3182d1b978786"
-url = "https://github.com/OpenRouterLabs/ori-releases/releases/download/cli-0.15.6-4855f79/ori-darwin-x64"
-url_api = "https://api.github.com/repos/OpenRouterLabs/ori-releases/releases/assets/606464687"
-
-[tools.ori."platforms.macos-x64-baseline"]
-checksum = "sha256:aff491540455470ce2cac016efaef60e8d69bec322f082aa23a3182d1b978786"
-url = "https://github.com/OpenRouterLabs/ori-releases/releases/download/cli-0.15.6-4855f79/ori-darwin-x64"
-url_api = "https://api.github.com/repos/OpenRouterLabs/ori-releases/releases/assets/606464687"
-
-[tools.ori."platforms.windows-x64"]
-checksum = "sha256:0369007d46399e981b31a1c272482cca033f761a14c68670b569248ba65ba71e"
-url = "https://github.com/OpenRouterLabs/ori-releases/releases/download/cli-0.15.6-4855f79/ori-windows-x64.exe"
-url_api = "https://api.github.com/repos/OpenRouterLabs/ori-releases/releases/assets/606465166"
-
-[tools.ori."platforms.windows-x64-baseline"]
-checksum = "sha256:0369007d46399e981b31a1c272482cca033f761a14c68670b569248ba65ba71e"
-url = "https://github.com/OpenRouterLabs/ori-releases/releases/download/cli-0.15.6-4855f79/ori-windows-x64.exe"
-url_api = "https://api.github.com/repos/OpenRouterLabs/ori-releases/releases/assets/606465166"
-
 [[tools.pitchfork]]
 version = "2.24.2"
 backend = "aqua:jdx/pitchfork"

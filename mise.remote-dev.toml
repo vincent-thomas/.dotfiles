@@ -1,9 +1,0 @@
-# Only loaded on the "dev" remote (see `mise_env` in mise.toml).
-
-[bootstrap.services.claude-rc]
-scope = "user"
-description = "Claude Code remote control"
-command = "~/.local/bin/mise exec claude@latest -- claude remote-control"
-working_directory = "~"
-restart = "always"
-requires_tools = true
