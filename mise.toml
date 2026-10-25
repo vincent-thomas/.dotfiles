@@ -5,7 +5,6 @@
 source = "."
 
 [bootstrap.remote.hosts.dev]
-mise_env = ["remote-dev"]
 host = "dev"
 user = "ubuntu"
 port = 22
