@@ -48,9 +48,7 @@ alias -s md="bat"
 # end
 
 alias v="nvim"
-alias cargo="c"
-
-. "$HOME/.config/op/plugins.sh"
+alias c="cargo"
 
 fpath+=("$HOME/.local/share/zsh/site-functions")
 autoload -Uz compinit && compinit
