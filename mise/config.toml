@@ -1,3 +1,6 @@
+# route plain cargo through mr boxington (mbx) for shared build caching
+wrappers = { cargo = { command = "mbx", env = { MBX_CARGO_SHIM_MODE = "1" } } }
+
 [settings]
 lockfile = true
 minimum_release_age = "0"
@@ -6,6 +9,7 @@ minimum_release_age = "0"
 # langs
 bun = "latest"
 rust = "latest"
+mr-boxington = "latest"
 
 # harnesses
 codex = "latest"
