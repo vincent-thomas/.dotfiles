@@ -5,6 +5,7 @@
 source = "."
 
 [bootstrap.remote.hosts.dev]
+mise_env = ["remote-dev"]
 host = "dev"
 user = "ubuntu"
 port = 22
@@ -40,15 +41,20 @@ show_deps_stale = false
 
 [dotfiles]
 "~/.config/mise/config.toml" = { source = "mise/config.toml", mode = "copy" }
+"~/.config/mise/mise.lock" = { source = "mise/mise.lock", mode = "copy" }
 "~/.config/mise/conf.d/nvim.toml" = { source = "~/.config/nvim/mise.toml", mode = "symlink" }
 "~/.gitconfig" = "git/gitconfig"
 "~/.tmux.conf" = "tmux/conf"
-"~/.config/scripts/tmux-sessioniser.sh" = "tmux/scripts/tmux-sessioniser.sh"
+"~/.config/scripts" = "tmux/scripts"
 
 # zshrc
 "~/.zshrc/mise_activate" = { block = "eval \"$(mise activate zsh)\"" }
 "~/.zshrc/config" = { source = "zsh/zshrc", template = "tera" }
-
 # zprofile
 "~/.zprofile/setup_path" = { block = "export PATH=\"$PATH:$HOME/.local/bin\"" }
 "~/.zprofile/mise_activate_shims" = { block = "eval \"$(mise activate zsh --shims)\"" }
+
+[tools]
+claude = "latest"
+node = "lts"
+stripe = "latest"

@@ -19,6 +19,7 @@ fd = "latest"
 ripgrep = "latest"
 fzf = "latest"
 bat = "latest"
+ori = "latest"
 
 # dev
 neovim = "latest"
